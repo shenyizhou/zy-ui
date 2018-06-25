@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>zy-ui</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script src="/dist/build.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>zy-ui</title>
+</head>
+
+<body>
+  <div id="app">
+    <zy-input-group :label="label" :value="input" @input="handleInput"></zy-input-group>
+  </div>
+  <!-- 一定要先引入vue，不然zy-ui安装不了，这里使用cdn加速 -->
+  <script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+  <!-- 需要相对路径，/dist/zy-ui.min.js 会定位到 file:///D:/dist/zy-ui.min.js -->
+  <script src="./dist/zy-ui.min.js"></script>
+  <script>
+    // 扩展构造器
+    const example = Vue.extend({
+      name: 'example',
+      data() {
+        return {
+          label: 'Hello',
+          input: 'zy',
+        }
+      },
+      methods: {
+        handleInput(value) {
+          console.log(value);
+        }
+      },
+    });
+    // 挂载到app标签上
+    new example().$mount('#app');
+
+  </script>
+</body>
+
 </html>
