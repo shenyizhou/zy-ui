@@ -2,9 +2,17 @@
 
 > zy-ui
 
+## Document
+
+[See Document](http://shenyizhou.github.io/2018/06/23/2018-6-23-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84UI%E5%BA%93/#%E6%9B%B4%E5%A4%9A)
+
+## Total Project
+
+This project is just a simple. See [total project](https://github.com/zyteam/xkui)
+
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 
@@ -15,4 +23,23 @@ npm run dev
 npm run build
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Quick Start
+
+```javascript
+import Vue from 'vue';
+import ZyUI from 'zy-ui';
+
+Vue.use(ZyUI);
+
+// or
+import {
+  InputGroup,
+  // ...
+} from 'zy-ui';
+
+Vue.component(InputGroup.name, InputGroup);
+```
+
+## Browser Support
+
+Modern browsers and Internet Explorer 10+.
